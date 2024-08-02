@@ -1,29 +1,27 @@
 
-### 4. Prever
-
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
-
 
 # Implementação da Previsão de Estoque Inteligente na AWS com SageMaker Canvas
 Aqui está um exemplo de como foi implementado o desafio utilizando o dataset fornecido.
 
 ## 1. Selecionar Dataset
+
 Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv que contém as seguintes colunas:
 
 - ID_PRODUTO: Identificador único do produto.
 - DATA_EVENTO: Data do evento relacionado ao produto.
 - PRECO: Preço do produto na data do evento.
 - QUANTIDADE_ESTOQUE: Quantidade em estoque do produto na data do evento.
+
   
 ## 2. Construir/Treinar
+
 - Importar Dataset: Foi feito o upload do dataset no SageMaker Canvas.
 - Configurar Variáveis: Foi definido QUANTIDADE_ESTOQUE como a variável de saída (o que queremos prever) e as outras colunas como variáveis de entrada.
 - Iniciar Treinamento: Configurado o modelo e inicie o treinamento.
 
 
 ## 3. Analisar
+
 ### 3.1 Métricas de Performance: Após o treinamento, verifique as seguintes métricas de desempenho do modelo:
 
   - Avg. wQL (Average Weighted Quantile Loss): 1.027
@@ -43,5 +41,15 @@ Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv q
       
 ### 3.2 Características Influentes: Analisando as principais características que influenciam as previsões do modelo. Identifique que a variável que têm maior impacto nas previsões do estoque é preço, como já era de se esperar, já que quanto mais alto o preço menos as pessoas compram e a necessidade de estoque é menor.
 
+
+# 4. Prever
+
+- Fazer Previsões: Use o modelo treinado para prever o estoque futuro.
+- Exportar Resultados: Baixe e analise os resultados das previsões.
+- Documentar Conclusões: Documente suas conclusões e insights baseados nas previsões.
+
+
+# Conclusão
+Através deste desafio, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning de maneira intuitiva e sem a necessidade de codificação. A documentação e análise do processo são essenciais para entender as capacidades e limitações do modelo criado.
 
 
