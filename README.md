@@ -1,28 +1,3 @@
-# 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
-
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
-
-## 📋 Pré-requisitos
-
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
-
-
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
-
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
-
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
-
-
-## 🚀 Passo a Passo
-
-### 1. Selecionar Dataset
-
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
 
 ### 2. Construir/Treinar
 
@@ -59,8 +34,26 @@ Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv q
 - PRECO: Preço do produto na data do evento.
 - QUANTIDADE_ESTOQUE: Quantidade em estoque do produto na data do evento.
   
-##2. Construir/Treinar
+## 2. Construir/Treinar
 - Importar Dataset: Foi feito o upload do dataset no SageMaker Canvas.
-- Configurar Variáveis: Defina QUANTIDADE_ESTOQUE como a variável de saída (o que queremos prever) e as outras colunas como variáveis de entrada.
-- Iniciar Treinamento: Configure o modelo e inicie o treinamento.
-3.
+- Configurar Variáveis: Foi definido QUANTIDADE_ESTOQUE como a variável de saída (o que queremos prever) e as outras colunas como variáveis de entrada.
+- Iniciar Treinamento: Configurado o modelo e inicie o treinamento.
+
+
+## 3. Analisar
+###Métricas de Performance: Após o treinamento, verifique as seguintes métricas de desempenho do modelo:
+
+  - Avg. wQL (Average Weighted Quantile Loss): 1.027
+    - Esta métrica avalia a precisão das previsões do modelo em diferentes quantis. Uma menor perda quantílica ponderada indica previsões mais precisas.
+      
+  - MAPE (Mean Absolute Percentage Error): 0.001
+    - O MAPE mede a precisão das previsões como uma porcentagem. É a média dos erros absolutos dividida pelos valores reais, multiplicada por 100. Um valor mais baixo indica maior precisão.
+      
+  - WAPE (Weighted Absolute Percentage Error): 1.038
+    - O WAPE é semelhante ao MAPE, mas leva em consideração o peso dos diferentes itens. Isso ajuda a entender a precisão das previsões considerando a importância relativa dos itens.
+     
+  - RMSE (Root Mean Squared Error): 2.085
+    - O RMSE calcula a raiz quadrada da média dos erros quadrados. É uma métrica comum para medir a diferença entre os valores previstos pelo modelo e os valores observados. Um valor mais baixo indica melhores previsões.
+    
+  - MASE (Mean Absolute Scaled Error): 0.002
+    - O MASE é a média dos erros absolutos escalados pelo erro médio de um modelo de referência. Uma pontuação de MASE menor que 1 indica que o modelo é melhor do que o modelo de referência.
