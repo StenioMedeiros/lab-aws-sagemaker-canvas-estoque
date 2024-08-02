@@ -45,3 +45,22 @@ Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda p
 ## 🤔 Dúvidas?
 
 Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+
+
+
+# Implementação da Previsão de Estoque Inteligente na AWS com SageMaker Canvas
+Aqui está um exemplo de como foi implementado o desafio utilizando o dataset fornecido.
+
+## 1. Selecionar Dataset
+Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv que contém as seguintes colunas:
+
+- ID_PRODUTO: Identificador único do produto.
+- DATA_EVENTO: Data do evento relacionado ao produto.
+- PRECO: Preço do produto na data do evento.
+- QUANTIDADE_ESTOQUE: Quantidade em estoque do produto na data do evento.
+  
+##2. Construir/Treinar
+- Importar Dataset: Foi feito o upload do dataset no SageMaker Canvas.
+- Configurar Variáveis: Defina QUANTIDADE_ESTOQUE como a variável de saída (o que queremos prever) e as outras colunas como variáveis de entrada.
+- Iniciar Treinamento: Configure o modelo e inicie o treinamento.
+3.
