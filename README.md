@@ -1,26 +1,9 @@
 
-### 2. Construir/Treinar
-
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
-
-### 3. Analisar
-
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
-
 ### 4. Prever
 
 -   Use o modelo treinado para fazer previsões de estoque.
 -   Exporte os resultados e analise as previsões geradas.
 -   Documente suas conclusões e qualquer insight obtido a partir das previsões.
-
-## 🤔 Dúvidas?
-
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
-
 
 
 # Implementação da Previsão de Estoque Inteligente na AWS com SageMaker Canvas
@@ -41,7 +24,7 @@ Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv q
 
 
 ## 3. Analisar
-###Métricas de Performance: Após o treinamento, verifique as seguintes métricas de desempenho do modelo:
+### 3.1 Métricas de Performance: Após o treinamento, verifique as seguintes métricas de desempenho do modelo:
 
   - Avg. wQL (Average Weighted Quantile Loss): 1.027
     - Esta métrica avalia a precisão das previsões do modelo em diferentes quantis. Uma menor perda quantílica ponderada indica previsões mais precisas.
@@ -57,3 +40,8 @@ Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv q
     
   - MASE (Mean Absolute Scaled Error): 0.002
     - O MASE é a média dos erros absolutos escalados pelo erro médio de um modelo de referência. Uma pontuação de MASE menor que 1 indica que o modelo é melhor do que o modelo de referência.
+      
+### 3.2 Características Influentes: Analisando as principais características que influenciam as previsões do modelo. Identifique que a variável que têm maior impacto nas previsões do estoque é preço, como já era de se esperar, já que quanto mais alto o preço menos as pessoas compram e a necessidade de estoque é menor.
+
+
+
