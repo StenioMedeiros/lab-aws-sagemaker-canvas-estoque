@@ -39,19 +39,21 @@ Utilizaremos o dataset dataset-1000-com-preco-variavel-e-renovacao-estoque.csv q
   - MASE (Mean Absolute Scaled Error) = 0.002
     - O MASE é a média dos erros absolutos escalados pelo erro médio de um modelo de referência. Uma pontuação de MASE menor que 1 indica que o modelo é melhor do que o modelo de referência.
       
-### 3.2 Características Influentes: Analisando as principais características que influenciam as previsões do modelo. Identifique que a variável que têm maior impacto nas previsões do estoque é preço, como já era de se esperar, já que quanto mais alto o preço menos as pessoas compram e a necessidade de estoque é menor.
+### 3.2 Características Influentes: Analisando as principais características que influenciam as previsões do modelo. Identifique que a variável que têm maior impacto nas previsões do estoque é preço, como já era de se esperar.
 
 
 # 4. Prever
 
-- Fazer Previsões: 
-  - previsões do estoque é preço, como já era de se esperar, já que quanto mais alto o preço menos as pessoas compram e a necessidade de estoque é menor.
-- Exportar Resultados:
-  -
-- Documentar Conclusões: Documente suas conclusões e insights baseados nas previsões.
+- Previsões e analise de um dos produtos:
+    ![single_prediction_results (1)](https://github.com/user-attachments/assets/4e1343b1-1204-436c-be6d-af24b121d340)
+    ![single_prediction_results (2)](https://github.com/user-attachments/assets/f57c02f1-914e-4e75-80f9-6ee57af4939f)
+    ![single_prediction_results](https://github.com/user-attachments/assets/8d0b228c-bd07-415c-a44b-09a4558e9f35)
 
 
+  - Como esperado das previsões de estoque é a variavel preço que inflencia na previsaõ.
+
+  
 # Conclusão
-Através deste desafio, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning de maneira intuitiva e sem a necessidade de codificação. A documentação e análise do processo são essenciais para entender as capacidades e limitações do modelo criado.
+Através deste desafio, foi possivel aprender a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning de maneira intuitiva e sem a necessidade de codificação. A documentação e análise do processo são essenciais para entender as capacidades e limitações do modelo criado.
 
 
